@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novarè Injury Care | Auto Accident Injury Recovery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-dark: #0a1628;
+            --navy: #132743;
+            --navy-light: #1e3a5f;
+            --gold: #d4a847;
+            --gold-light: #e8c36a;
+            --gold-dark: #b8922e;
+            --cream: #faf8f5;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e8e8e8;
+            --gray-600: #6b7280;
+            --gray-800: #1f2937;
+            --red-urgent: #dc2626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--gray-800);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(135deg, var(--red-urgent) 0%, #b91c1c 100%);
+            color: var(--white);
+            padding: 14px 24px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 0.3px;
+            animation: pulse-bg 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-bg {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.92; }
+        }
+
+        .urgency-banner span {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--navy-dark);
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .phone-number {
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .phone-number:hover {
+            color: var(--gold);
+        }
+
+        .spanish-tag {
+            background: var(--gold);
+            color: var(--navy-dark);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(165deg, var(--navy-dark) 0%, var(--navy) 50%, var(--navy-light) 100%);
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%231e3a5f" stroke-width="0.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="%231e3a5f" stroke-width="0.5"/><circle cx="50" cy="50" r="20" fill="none" stroke="%231e3a5f" stroke-width="0.5"/></svg>') center/cover no-repeat;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .hero-text h1 .highlight {
+            color: var(--gold);
+        }
+
+        .hero-subhead {
+            font-size: 20px;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .hero-body {
+            color: rgba(255,255,255,0.75);
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        .pip-callout {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--navy-dark);
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin: 28px 0;
+            font-weight: 600;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pip-callout svg {
+            flex-shrink: 0;
+        }
+
+        .hero-features {
+            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+            margin-bottom: 36px;
+        }
+
+        .hero-features p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-features svg {
+            color: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image-placeholder {
+            background: linear-gradient(145deg, var(--navy-light) 0%, var(--navy) 100%);
+            border-radius: 16px;
+            aspect-ratio: 4/3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(212, 168, 71, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, transparent 40%, rgba(212, 168, 71, 0.1) 50%, transparent 60%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .placeholder-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(212, 168, 71, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .placeholder-icon svg {
+            width: 40px;
+            height: 40px;
+            color: var(--gold);
+        }
+
+        .placeholder-text {
+            color: rgba(255,255,255,0.5);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--navy-dark);
+            padding: 18px 36px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 168, 71, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(212, 168, 71, 0.5);
+        }
+
+        .cta-secondary {
+            display: block;
+            margin-top: 16px;
+            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+        }
+
+        .cta-secondary a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Credibility Strip */
+        .credibility-strip {
+            background: var(--white);
+            padding: 40px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .credibility-items {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+
+        .credibility-item {
+            padding: 16px;
+        }
+
+        .credibility-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .credibility-label {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.4;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-light {
+            background: var(--white);
+        }
+
+        .section-cream {
+            background: var(--cream);
+        }
+
+        .section-dark {
+            background: var(--navy-dark);
+            color: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .section-dark .section-header h2 {
+            color: var(--white);
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Validation Section */
+        .validation-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .validation-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 28px;
+        }
+
+        .validation-text p {
+            font-size: 17px;
+            color: var(--gray-800);
+            margin-bottom: 20px;
+        }
+
+        .validation-text .emphasis {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .validation-image-placeholder {
+            background: linear-gradient(145deg, var(--gray-100) 0%, var(--gray-200) 100%);
+            border-radius: 16px;
+            aspect-ratio: 4/3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--gray-200);
+        }
+
+        /* Differentiation Section */
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .diff-card {
+            background: var(--cream);
+            padding: 36px;
+            border-radius: 12px;
+            border-left: 4px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+
+        .diff-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+        }
+
+        .diff-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .diff-card h3 svg {
+            color: var(--gold);
+        }
+
+        .diff-card p {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Why Section */
+        .why-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .why-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .why-content p {
+            font-size: 17px;
+            color: var(--gray-800);
+            margin-bottom: 24px;
+        }
+
+        .recovery-list {
+            background: var(--navy);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+
+        .recovery-list h3 {
+            color: var(--gold);
+            font-size: 18px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .recovery-list ol {
+            list-style: none;
+            counter-reset: recovery;
+        }
+
+        .recovery-list li {
+            color: var(--white);
+            font-size: 17px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            counter-increment: recovery;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .recovery-list li:last-child {
+            border-bottom: none;
+        }
+
+        .recovery-list li::before {
+            content: counter(recovery);
+            background: var(--gold);
+            color: var(--navy-dark);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Persona Section */
+        .persona-section {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .persona-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .persona-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 28px;
+        }
+
+        .persona-content p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 20px;
+        }
+
+        .persona-content .highlight-text {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 40px 32px;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--navy-dark);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(212, 168, 71, 0.4);
+        }
+
+        .process-step h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 24px 0 16px;
+        }
+
+        .process-step p {
+            font-size: 16px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        .process-footer {
+            text-align: center;
+            margin-top: 48px;
+            padding: 32px;
+            background: var(--navy);
+            border-radius: 12px;
+        }
+
+        .process-footer p {
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .process-footer span {
+            color: var(--gold);
+        }
+
+        /* Timing Section */
+        .timing-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .timing-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 28px;
+        }
+
+        .timing-text p {
+            font-size: 17px;
+            color: var(--gray-800);
+            margin-bottom: 20px;
+        }
+
+        .timing-box {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            padding: 48px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .timing-box .days {
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            font-weight: 700;
+            color: var(--navy-dark);
+            line-height: 1;
+        }
+
+        .timing-box .days-label {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 16px;
+        }
+
+        .timing-box .pip-amount {
+            font-size: 18px;
+            color: var(--navy);
+            font-weight: 600;
+        }
+
+        .timing-cta {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 16px 24px;
+            border-radius: 8px;
+            margin-top: 24px;
+            font-weight: 600;
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 36px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            color: var(--gold);
+            opacity: 0.3;
+            position: absolute;
+            top: 16px;
+            left: 24px;
+            line-height: 1;
+        }
+
+        .testimonial-card p {
+            font-size: 16px;
+            color: var(--gray-800);
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 15px;
+        }
+
+        .testimonial-location {
+            color: var(--gray-600);
+            font-size: 14px;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(165deg, var(--navy-dark) 0%, var(--navy) 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .final-cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 28px;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 24px;
+        }
+
+        .final-cta .stats {
+            color: var(--gold);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .offer-box {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+
+        .offer-box h3 {
+            color: var(--gold);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .offer-box p {
+            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+
+        /* Attorney Section */
+        .attorney-section {
+            background: var(--gray-100);
+            padding: 80px 0;
+        }
+
+        .attorney-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .attorney-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 24px;
+        }
+
+        .attorney-text p {
+            font-size: 17px;
+            color: var(--gray-800);
+            margin-bottom: 20px;
+        }
+
+        .attorney-features {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .attorney-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .attorney-feature:last-child {
+            border-bottom: none;
+        }
+
+        .attorney-feature svg {
+            color: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .attorney-feature span {
+            font-size: 16px;
+            color: var(--gray-800);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy-dark);
+            padding: 60px 0 40px;
+            color: var(--white);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .footer-tagline {
+            color: var(--gold);
+            font-style: italic;
+            font-size: 15px;
+        }
+
+        .footer-contact h3,
+        .footer-locations h3 {
+            color: var(--gold);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-contact p,
+        .footer-locations p {
+            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .footer-contact a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .footer-contact a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 32px;
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .credibility-items {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .credibility-items > div:nth-child(4),
+            .credibility-items > div:nth-child(5) {
+                grid-column: span 1;
+            }
+
+            .validation-content,
+            .timing-content,
+            .attorney-content {
+                grid-template-columns: 1fr;
+            }
+
+            .diff-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .header-cta {
+                flex-direction: column;
+            }
+
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-header h2,
+            .validation-text h2,
+            .why-content h2,
+            .persona-content h2,
+            .timing-text h2,
+            .final-cta h2 {
+                font-size: 32px;
+            }
+
+            .credibility-items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .credibility-number {
+                font-size: 28px;
+            }
+
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .timing-box .days {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        <span>⚠️ IMPORTANT</span> Florida law: You have 14 days from your accident to access $10,000 in PIP benefits
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Novarè<span>'</span> Injury Care</div>
+                <div class="header-cta">
+                    <span class="spanish-tag">Se habla español</span>
+                    <a href="tel:239-579-4444" class="phone-number">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        239-579-4444
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1><span class="highlight">30,000 Auto Accident Cases. 30 Years of Experience.</span> One Goal: Get You Functioning Again and Document Every Step for Your Case.</h1>
+                    <p class="hero-subhead">Novarè Injury Care is a medically integrated injury recovery center in Southwest Florida. We diagnose, treat, and document auto accident injuries with precision that holds up in your recovery and in court.</p>
+                    <p class="hero-body">If you were in a car accident and something still feels wrong, trust that instinct. Pain that shows up days later is not weakness. It is your body telling you something needs attention.</p>
+                    
+                    <div class="pip-callout">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        You have 14 days from your accident to access $10,000 in PIP benefits under Florida law. That clock is already running.
+                    </div>
+
+                    <div class="hero-features">
+                        <p><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Same-day and next-day appointments</p>
+                        <p><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> In-house digital X-ray</p>
+                        <p><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Orthopedic oversight when needed</p>
+                        <p><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Documentation trusted by attorneys across Florida</p>
+                    </div>
+
+                    <a href="#" class="cta-button">
+                        Schedule Your Free Injury Evaluation
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <p class="cta-secondary">Or call <a href="tel:239-579-4444">239-579-4444</a> • Se habla español</p>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-placeholder">
+                        <div class="placeholder-icon">
+                            <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+                        </div>
+                        <span class="placeholder-text">Hero Image</span>
+                        <span class="placeholder-text" style="font-size: 11px; margin-top: 4px;">Doctor with patient or clinic interior</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credibility Strip -->
+    <section class="credibility-strip">
+        <div class="container">
+            <div class="credibility-items">
+                <div class="credibility-item">
+                    <div class="credibility-number">30+</div>
+                    <div class="credibility-label">Years Clinical Experience</div>
+                </div>
+                <div class="credibility-item">
+                    <div class="credibility-number">30,000+</div>
+                    <div class="credibility-label">Injury Cases Documented</div>
+                </div>
+                <div class="credibility-item">
+                    <div class="credibility-number">On-Site</div>
+                    <div class="credibility-label">Orthopedic Surgeon</div>
+                </div>
+                <div class="credibility-item">
+                    <div class="credibility-number">IME</div>
+                    <div class="credibility-label">Certified for Legal Testimony</div>
+                </div>
+                <div class="credibility-item">
+                    <div class="credibility-number">1st</div>
+                    <div class="credibility-label">FL Clinic for AI Laser Research</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Validation Section -->
+    <section class="section section-cream">
+        <div class="container">
+            <div class="validation-content">
+                <div class="validation-text">
+                    <h2>You Are Not Imagining It</h2>
+                    <p>Most people walk away from a car accident thinking they got lucky. No broken bones. No ambulance. Just a little shaken up.</p>
+                    <p>Then three days later the neck stiffens. A week later the headaches start. Two weeks in and you cannot sit at your desk without your lower back screaming at you.</p>
+                    <p><span class="emphasis">This is not bad luck. This is how soft tissue injuries work.</span> Adrenaline masks damage. Inflammation builds slowly. By the time you feel it, the injury has been there all along.</p>
+                    <p>The question is not whether you are hurt. The question is whether you will get it properly evaluated before your 14-day PIP window closes and before the damage becomes harder to reverse.</p>
+                </div>
+                <div class="validation-image-placeholder">
+                    <div class="placeholder-icon">
+                        <svg fill="none" stroke="var(--navy)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                    </div>
+                    <span class="placeholder-text" style="color: var(--navy);">Placeholder Image</span>
+                    <span class="placeholder-text" style="font-size: 11px; color: var(--gray-600);">Patient consultation or X-ray review</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differentiation Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Not a Chiropractic Office. A Medical Corporation Built for Injury Recovery.</h2>
+                <p>Most chiropractors adjust your spine and send you home. That is not what we do.</p>
+            </div>
+            <div class="diff-grid">
+                <div class="diff-card">
+                    <h3>
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        In-House Diagnostics
+                    </h3>
+                    <p>Digital X-ray and MRI coordination in-house, so we see what is actually wrong before we touch you. No guessing. No assumptions.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                        Advanced Treatment Options
+                    </h3>
+                    <p>Chiropractic treatment combined with spinal decompression, Class IV laser therapy, and acoustic shockwave when your injury calls for it.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Orthopedic Surgeon On-Site
+                    </h3>
+                    <p>Orthopedic surgeon available twice a month for cases that need surgical evaluation. Complex injuries deserve specialist oversight.</p>
+                </div>
+                <div class="diff-card">
+                    <h3>
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        Court-Ready Documentation
+                    </h3>
+                    <p>Documentation detailed enough to stand up in deposition, arbitration, or trial. Your case deserves records that hold weight.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Works Section -->
+    <section class="section section-cream">
+        <div class="container">
+            <div class="why-content">
+                <h2>Why Accident Injuries Linger and What It Takes to Actually Recover</h2>
+                <p>A car accident puts forces on your body it was never designed to handle. Even at low speeds, your head whips forward, your spine compresses, your muscles brace on impact, and your joints take the hit.</p>
+                <p>The result: whiplash, disc bulges, nerve irritation, SI joint dysfunction, muscle spasm, and restricted movement patterns your body adopts to protect itself.</p>
+                <p>Here is the problem. Those protective patterns become permanent if nobody addresses them. The body heals around the dysfunction. Pain becomes chronic. Movement stays limited. And six months later you are still waking up stiff and wondering why you never got back to normal.</p>
+                
+                <div class="recovery-list">
+                    <h3>Proper Recovery Requires Three Things</h3>
+                    <ol>
+                        <li>Accurate diagnosis so you know exactly what is injured</li>
+                        <li>Targeted treatment that addresses the root cause, not just the pain</li>
+                        <li>Consistent follow-through until function is restored</li>
+                    </ol>
+                </div>
+                
+                <p style="text-align: center; font-weight: 600; font-size: 18px;">That is what our care is designed to deliver. Not temporary relief. Real recovery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Persona Section -->
+    <section class="persona-section">
+        <div class="container">
+            <div class="persona-content">
+                <h2>For People Who Cannot Afford to Stay Broken</h2>
+                <p>You have a job. A family. Responsibilities that do not pause because your back hurts.</p>
+                <p>Our patients are not looking for someone to tell them to rest and take ibuprofen. They are looking for a provider who will figure out what is wrong and fix it so they can get back to <span class="highlight-text">the life that depends on them.</span></p>
+                <p>If that sounds like you, this is the right place.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section section-cream">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Recovery Works at Novarè</h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Diagnosis</h3>
+                    <p>Your first visit includes a full evaluation and imaging when appropriate. We identify exactly what is injured, how severe it is, and what it will take to fix it. No guessing. No cookie-cutter protocols.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Treatment</h3>
+                    <p>Based on your diagnosis, we build a care plan that may include chiropractic adjustments, spinal decompression, Class IV laser therapy, shockwave therapy, and rehabilitation exercises. Every visit has a purpose.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Recovery</h3>
+                    <p>We track your progress. We adjust your plan as you improve. And we document everything so your medical records reflect the full scope of your injury and recovery, whether you need them for insurance or for court.</p>
+                </div>
+            </div>
+            <div class="process-footer">
+                <p>The goal is not to keep you coming back. <span>The goal is to get you functioning and get you out.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timing Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="timing-content">
+                <div class="timing-text">
+                    <h2>The 14-Day Window You Cannot Ignore</h2>
+                    <p>Florida law requires you to seek medical treatment within 14 days of your auto accident to access your $10,000 in Personal Injury Protection benefits. Miss that window and you lose access to coverage you already paid for.</p>
+                    <p>This is not a sales tactic. It is state law. And it exists because insurance companies know that most people wait too long and forfeit their benefits.</p>
+                    <p>Beyond the legal deadline, there is a clinical reality: injuries treated early respond better. Scar tissue has not formed. Movement patterns have not locked in. The body is still ready to heal correctly.</p>
+                    <p><strong>If your accident happened recently, now is the time. If it has been a week or more and you still feel off, do not wait another day.</strong></p>
+                    <p style="margin-top: 24px;">Same-day and next-day appointments available.</p>
+                </div>
+                <div class="timing-box">
+                    <div class="days">14</div>
+                    <div class="days-label">DAYS</div>
+                    <div class="pip-amount">To Access Your $10,000 PIP Benefits</div>
+                    <div class="timing-cta">Florida Law • The Clock Is Running</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-cream">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Patients Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"I thought the pain would go away on its own. Three weeks after my accident I could barely turn my neck. Dr. Bracic found two bulging discs on the X-ray and put me on a treatment plan. Eight weeks later I was back at work full duty. They documented everything for my attorney."</p>
+                    <div class="testimonial-author">[Patient Name]</div>
+                    <div class="testimonial-location">Lehigh Acres, FL</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Other places made me feel like a number. Here they actually listened. I got answers, I got relief, and I got my life back."</p>
+                    <div class="testimonial-author">[Patient Name]</div>
+                    <div class="testimonial-location">Fort Myers, FL</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"My attorney told me to go to Novarè because their records hold up in court. He was right. But what surprised me was how much they actually helped me feel better. I was not expecting that from a PI clinic."</p>
+                    <div class="testimonial-author">[Patient Name]</div>
+                    <div class="testimonial-location">Cape Coral, FL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Your Recovery Starts with One Appointment</h2>
+                <p>You were in an accident. Your body took damage. And whether you are dealing with neck pain, back stiffness, headaches, nerve symptoms, or just a feeling that something is not right, you deserve to know exactly what is wrong and what it will take to fix it.</p>
+                <p>That is what we provide.</p>
+                <p class="stats">30,000 cases. 30 years. A team that diagnoses thoroughly, treats with precision, and documents everything.</p>
+                
+                <div class="offer-box">
+                    <h3>Schedule Your Free Auto Accident Injury Evaluation</h3>
+                    <p>Includes diagnostic assessment, imaging review, and a personalized recovery plan.</p>
+                </div>
+
+                <a href="#" class="cta-button">
+                    Book Online Now
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <p class="cta-secondary">Or call <a href="tel:239-579-4444">239-579-4444</a> • Se habla español</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attorney Section -->
+    <section class="attorney-section">
+        <div class="container">
+            <div class="attorney-content">
+                <div class="attorney-text">
+                    <h2>For Personal Injury Attorneys: Documentation That Wins Cases</h2>
+                    <p>You have seen it before. Weak medical records. Vague diagnoses. Doctors who crumble under cross-examination. It costs your client money and it costs you time.</p>
+                    <p>Novarè operates differently.</p>
+                    <p>Dr. Bracic has supported over 30,000 injury cases across Chicago and Florida courts. He is IME certified, deposition tested, and unafraid of trial. His documentation includes mechanism of injury, biomechanical analysis, objective findings, and treatment rationale that insurance adjusters and defense attorneys cannot dismiss.</p>
+                    <p><strong>Your clients get real care from a medically integrated team. You get records that hold up and a doctor who answers the phone.</strong></p>
+                    <a href="tel:239-579-4444" class="cta-button" style="margin-top: 24px;">
+                        Refer a Client or Discuss a Case
+                    </a>
+                </div>
+                <div class="attorney-features">
+                    <div class="attorney-feature">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span>30,000+ cases supported in Chicago & Florida courts</span>
+                    </div>
+                    <div class="attorney-feature">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span>IME certified for legal testimony</span>
+                    </div>
+                    <div class="attorney-feature">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span>Detailed mechanism of injury documentation</span>
+                    </div>
+                    <div class="attorney-feature">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span>Biomechanical analysis included</span>
+                    </div>
+                    <div class="attorney-feature">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span>Fast turnaround on demand letters</span>
+                    </div>
+                    <div class="attorney-feature">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span>We answer the phone. We meet deadlines.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Novarè<span>'</span> Injury Care</div>
+                    <p>Medically Integrated Injury Recovery</p>
+                    <p>30,000 Cases. 30 Years. Real Results.</p>
+                    <p class="footer-tagline">"Your Path to Stability and Strength. Restoring Function and Longevity."</p>
+                </div>
+                <div class="footer-locations">
+                    <h3>Locations</h3>
+                    <p>Lehigh Acres, FL</p>
+                    <p>Fort Myers, FL</p>
+                    <p style="margin-top: 16px;">Se habla español</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <a href="tel:239-579-4444">239-579-4444</a>
+                    <p style="margin-top: 16px;">Same-day appointments available</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Novarè Injury Care. All rights reserved. | Part of Novarè Medical Corporation</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
